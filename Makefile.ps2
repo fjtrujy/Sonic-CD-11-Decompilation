@@ -1,0 +1,88 @@
+DEBUG              = 0
+
+TARGET = RSDKv3-debug.elf
+TARGET_RELEASE = RSDKv3.elf
+
+ifeq ($(DEBUG), 1)
+   OPTIMIZE_LV	:= -O0 -g
+	RARCH_DEFINES += -DDEBUG
+else
+   OPTIMIZE_LV	:= -O3
+	LDFLAGS :=  -s
+endif
+
+INCDIR = -I$(PS2DEV)/gsKit/include -I$(PS2SDK)/ports/include -I$(PS2SDK)/ports/include/SDL2
+INCDIR += -Idependencies/all/filesystem/include \
+   -Idependencies/all/theoraplay \
+   -Idependencies/all/tinyxml2/
+CFLAGS = $(OPTIMIZE_LV) -ffast-math -fsingle-precision-constant -fpermissive
+ASFLAGS = $(CFLAGS)
+
+CFLAGS += -D__PS2__ -Dmain=SDL_main -DHAVE_SDL2
+
+LDFLAGS += -L$(PS2DEV)/gsKit/lib -L$(PS2SDK)/ports/lib -L.
+LIBS += -lSDL2main -lSDL2 -lSDL2_mixer -lpatches -lgskit -ldmakit -lps2_drivers -lmodplug -logg -lvorbis -lvorbisfile -ltheoradec
+
+
+SOURCES = \
+  dependencies/all/tinyxml2/tinyxml2.cpp \
+  dependencies/all/theoraplay/theoraplay.c \
+  RSDKv3/Animation.cpp \
+  RSDKv3/Audio.cpp \
+  RSDKv3/Collision.cpp \
+  RSDKv3/Debug.cpp \
+  RSDKv3/Drawing.cpp \
+  RSDKv3/Ini.cpp \
+  RSDKv3/Input.cpp \
+  RSDKv3/main.cpp \
+  RSDKv3/ModAPI.cpp \
+  RSDKv3/Math.cpp \
+  RSDKv3/Object.cpp \
+  RSDKv3/Palette.cpp \
+  RSDKv3/Player.cpp \
+  RSDKv3/Reader.cpp \
+  RSDKv3/RetroEngine.cpp \
+  RSDKv3/Scene.cpp \
+  RSDKv3/Scene3D.cpp \
+  RSDKv3/Script.cpp \
+  RSDKv3/Sprite.cpp \
+  RSDKv3/String.cpp \
+  RSDKv3/Text.cpp \
+  RSDKv3/Userdata.cpp \
+  RSDKv3/Video.cpp
+
+	  
+ifeq ($(FORCE_CASE_INSENSITIVE),1)
+  CXXFLAGS_ALL += -DFORCE_CASE_INSENSITIVE
+  SOURCES += RSDKv3/fcaseopen.c
+endif
+   
+ifneq ($(FORCE_CASE_INSENSITIVE),)
+	CXXFLAGS_ALL += -DFORCE_CASE_INSENSITIVE
+	SOURCES += RSDKv4/fcaseopen.c
+endif
+
+EE_OBJS := $(SOURCES:.c=.o)
+EE_OBJS := $(EE_OBJS:.cpp=.o)
+EE_CFLAGS = $(CFLAGS)
+EE_CXXFLAGS = $(CFLAGS)
+EE_LDFLAGS = $(LDFLAGS)
+EE_LIBS = $(LIBS)
+EE_ASFLAGS = $(ASFLAGS)
+EE_INCS = $(INCDIR)
+EE_BIN = $(TARGET)
+EE_GPVAL = $(GPVAL)
+
+all: $(EE_BIN)
+
+clean:
+	rm -f $(EE_BIN) $(EE_OBJS)
+
+release: all
+	ps2-packer $(EE_BIN) bin/$(TARGET_RELEASE)
+
+
+
+#Include preferences
+include $(PS2SDK)/samples/Makefile.pref
+include $(PS2SDK)/samples/Makefile.eeglobal_cpp
