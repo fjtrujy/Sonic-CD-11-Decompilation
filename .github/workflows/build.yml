@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - continuous-delivery
+      - macos-ci
 
 jobs: 
   v3-windows:
@@ -169,3 +170,24 @@ jobs:
         with:
           name: v3-linux
           path: bin
+  v3-macos:
+    runs-on: macos-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          brew install sdl2 libogg libvorbis theora
+          
+      - name: Build RSDKv3
+        run: |
+          xcodebuild -project RSDKv3.xcodeproj -scheme RSDKv3 -archivePath macos_bin/ archive
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: v3-macOS
+          path: macos_bin.xcarchive/Products/Applications/RSDKv3.app
