@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5BC375529760E44009BC277 /* libvorbis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BC375429760E44009BC277 /* libvorbis.dylib */; };
+		B5BC375729760E5E009BC277 /* libogg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BC375629760E5E009BC277 /* libogg.dylib */; };
+		B5BC375929760E95009BC277 /* libtheora.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BC375829760E95009BC277 /* libtheora.dylib */; };
+		B5BC375B2976108F009BC277 /* libvorbisfile.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BC375A2976108F009BC277 /* libvorbisfile.dylib */; };
+		B5BC375D2979A985009BC277 /* libSDL2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BC375C2979A985009BC277 /* libSDL2.dylib */; };
 		C92834D22615E66D00D51CCE /* Ini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BC2615E66C00D51CCE /* Ini.cpp */; };
 		C92834D32615E66D00D51CCE /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BD2615E66C00D51CCE /* Scene.cpp */; };
 		C92834D42615E66D00D51CCE /* Scene3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834BE2615E66C00D51CCE /* Scene3D.cpp */; };
@@ -30,14 +35,6 @@
 		C92834E62615E66D00D51CCE /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834D02615E66D00D51CCE /* Drawing.cpp */; };
 		C92834E72615E66D00D51CCE /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C92834D12615E66D00D51CCE /* Video.cpp */; };
 		C962193925898B0B00B47AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C962193625898B0A00B47AB3 /* Assets.xcassets */; };
-		C96219842589B10600B47AB3 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219832589B10600B47AB3 /* SDL2.framework */; };
-		C96219852589B10600B47AB3 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219832589B10600B47AB3 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C96219912589B50100B47AB3 /* Ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219902589B50100B47AB3 /* Ogg.framework */; };
-		C96219922589B50100B47AB3 /* Ogg.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219902589B50100B47AB3 /* Ogg.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C96219942589B51000B47AB3 /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219932589B51000B47AB3 /* Vorbis.framework */; };
-		C96219952589B51000B47AB3 /* Vorbis.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219932589B51000B47AB3 /* Vorbis.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C96219972589B51E00B47AB3 /* Theora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96219962589B51E00B47AB3 /* Theora.framework */; };
-		C96219982589B51E00B47AB3 /* Theora.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C96219962589B51E00B47AB3 /* Theora.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C96219A02589B7AB00B47AB3 /* theoraplay.c in Sources */ = {isa = PBXBuildFile; fileRef = C962199F2589B7AB00B47AB3 /* theoraplay.c */; };
 		C96219A5258C632A00B47AB3 /* cocoaHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = C96219A4258C632A00B47AB3 /* cocoaHelpers.mm */; };
 		C975E72826E32FB700F09AD4 /* ModAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C975E72726E32FB700F09AD4 /* ModAPI.cpp */; };
@@ -52,10 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C96219922589B50100B47AB3 /* Ogg.framework in Embed Frameworks */,
-				C96219852589B10600B47AB3 /* SDL2.framework in Embed Frameworks */,
-				C96219952589B51000B47AB3 /* Vorbis.framework in Embed Frameworks */,
-				C96219982589B51E00B47AB3 /* Theora.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +56,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B5BC375429760E44009BC277 /* libvorbis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvorbis.dylib; path = ../../../../usr/local/Cellar/libvorbis/1.3.7/lib/libvorbis.dylib; sourceTree = "<group>"; };
+		B5BC375629760E5E009BC277 /* libogg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libogg.dylib; path = ../../../../usr/local/Cellar/libogg/1.3.5/lib/libogg.dylib; sourceTree = "<group>"; };
+		B5BC375829760E95009BC277 /* libtheora.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtheora.dylib; path = ../../../../usr/local/Cellar/theora/1.1.1/lib/libtheora.dylib; sourceTree = "<group>"; };
+		B5BC375A2976108F009BC277 /* libvorbisfile.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvorbisfile.dylib; path = ../../../../usr/local/Cellar/libvorbis/1.3.7/lib/libvorbisfile.dylib; sourceTree = "<group>"; };
+		B5BC375C2979A985009BC277 /* libSDL2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSDL2.dylib; path = ../../../../usr/local/Cellar/sdl2/2.26.2/lib/libSDL2.dylib; sourceTree = "<group>"; };
 		C92834A72615E64C00D51CCE /* String.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = String.hpp; sourceTree = "<group>"; };
 		C92834A82615E64C00D51CCE /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		C92834A92615E64C00D51CCE /* Input.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Input.hpp; sourceTree = "<group>"; };
@@ -108,12 +106,6 @@
 		C92834D12615E66D00D51CCE /* Video.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Video.cpp; sourceTree = "<group>"; };
 		C962191925898A9300B47AB3 /* RSDKv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSDKv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C962193625898B0A00B47AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = dependencies/mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		C96219832589B10600B47AB3 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = dependencies/mac/SDL2.framework; sourceTree = "<group>"; };
-		C96219892589B3D900B47AB3 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/ogg/macosx/Ogg.framework; sourceTree = "<group>"; };
-		C962198C2589B3EF00B47AB3 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = "dependencies/mac/libvorbis-1.3.7/macosx/Vorbis.framework"; sourceTree = "<group>"; };
-		C96219902589B50100B47AB3 /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = dependencies/mac/libogg/macosx/Ogg.framework; sourceTree = "<group>"; };
-		C96219932589B51000B47AB3 /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = dependencies/mac/libvorbis/macosx/Vorbis.framework; sourceTree = "<group>"; };
-		C96219962589B51E00B47AB3 /* Theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Theora.framework; path = dependencies/mac/libtheora/macosx/Theora.framework; sourceTree = "<group>"; };
 		C962199A2589B57300B47AB3 /* theoraplay_cvtrgb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = theoraplay_cvtrgb.h; path = dependencies/all/theoraplay/theoraplay_cvtrgb.h; sourceTree = SOURCE_ROOT; };
 		C962199B2589B57300B47AB3 /* theoraplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = theoraplay.h; path = dependencies/all/theoraplay/theoraplay.h; sourceTree = SOURCE_ROOT; };
 		C962199F2589B7AB00B47AB3 /* theoraplay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = theoraplay.c; path = dependencies/all/theoraplay/theoraplay.c; sourceTree = SOURCE_ROOT; };
@@ -131,11 +123,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96219912589B50100B47AB3 /* Ogg.framework in Frameworks */,
-				C96219842589B10600B47AB3 /* SDL2.framework in Frameworks */,
-				C96219942589B51000B47AB3 /* Vorbis.framework in Frameworks */,
+				B5BC375D2979A985009BC277 /* libSDL2.dylib in Frameworks */,
+				B5BC375929760E95009BC277 /* libtheora.dylib in Frameworks */,
+				B5BC375529760E44009BC277 /* libvorbis.dylib in Frameworks */,
+				B5BC375B2976108F009BC277 /* libvorbisfile.dylib in Frameworks */,
+				B5BC375729760E5E009BC277 /* libogg.dylib in Frameworks */,
 				C975E72C26E3303E00F09AD4 /* OpenGL.framework in Frameworks */,
-				C96219972589B51E00B47AB3 /* Theora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,13 +228,12 @@
 		C96219822589B10600B47AB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5BC375C2979A985009BC277 /* libSDL2.dylib */,
+				B5BC375A2976108F009BC277 /* libvorbisfile.dylib */,
+				B5BC375829760E95009BC277 /* libtheora.dylib */,
+				B5BC375629760E5E009BC277 /* libogg.dylib */,
+				B5BC375429760E44009BC277 /* libvorbis.dylib */,
 				C975E72B26E3303E00F09AD4 /* OpenGL.framework */,
-				C96219962589B51E00B47AB3 /* Theora.framework */,
-				C96219932589B51000B47AB3 /* Vorbis.framework */,
-				C96219902589B50100B47AB3 /* Ogg.framework */,
-				C962198C2589B3EF00B47AB3 /* Vorbis.framework */,
-				C96219892589B3D900B47AB3 /* Ogg.framework */,
-				C96219832589B10600B47AB3 /* SDL2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -506,18 +498,30 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/dependencies/mac",
-					"$(PROJECT_DIR)/dependencies/mac/ogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis-1.3.7/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libtheora/macosx",
+					/usr/local/opt/libogg/lib,
+					/usr/local/opt/theora/lib,
+					/usr/local/opt/libvorbis/lib/,
+					/usr/local/opt/sdl2/lib,
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/all/tinyxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/all/tinyxml2",
+					/usr/local/opt/theora/include,
+					/usr/local/opt/libogg/include,
+					/usr/local/opt/libvorbis/include,
+					/usr/local/opt/SDL2/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/opt/libogg/lib,
+					/usr/local/opt/libvorbis/lib/,
+					/usr/local/opt/theora/lib,
+					/usr/local/opt/sdl2/lib,
 				);
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
@@ -537,18 +541,30 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/dependencies/mac",
-					"$(PROJECT_DIR)/dependencies/mac/ogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis-1.3.7/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libogg/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libvorbis/macosx",
-					"$(PROJECT_DIR)/dependencies/mac/libtheora/macosx",
+					/usr/local/opt/libogg/lib,
+					/usr/local/opt/theora/lib,
+					/usr/local/opt/libvorbis/lib/,
+					/usr/local/opt/sdl2/lib,
 				);
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/dependencies/all/tinyxml2";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependencies/all/tinyxml2",
+					/usr/local/opt/theora/include,
+					/usr/local/opt/libogg/include,
+					/usr/local/opt/libvorbis/include,
+					/usr/local/opt/SDL2/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/dependencies/mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/opt/libogg/lib,
+					/usr/local/opt/libvorbis/lib/,
+					/usr/local/opt/theora/lib,
+					/usr/local/opt/sdl2/lib,
 				);
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Decomp.RSDKv3;
